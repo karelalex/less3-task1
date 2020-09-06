@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'less3-task1';
+  get options(): string[] {
+    return JSON.parse(localStorage.getItem('names')) || [];
+  }
 }
